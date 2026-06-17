@@ -1,4 +1,4 @@
-import Vite from "./vite";
+import Packa from "./packa";
 
 export interface LogosProps {
   width?: number | string;
@@ -7,7 +7,7 @@ export interface LogosProps {
 }
 
 const Logos = {
-  Vite,
+  Packa,
 };
 
 export default Logos;

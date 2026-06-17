@@ -6,7 +6,7 @@
 - [Tailwind CSS v4](https://tailwindcss.com/) - Latest utility-first CSS framework with CSS-based config
 - [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/) - Component architecture
 - [Path aliases](https://github.com/vitejs/vite/issues/88#issuecomment-762415200) - Clean imports
-- [Hero Icons](https://heroicons.com/) - Beautiful hand-crafted SVG icons
+- [Phosphor Icons](https://phosphoricons.com/) - Beautiful hand-crafted SVG icons
 - **LLM-ready** - Comprehensive AI assistance docs ([CLAUDE.md](CLAUDE.md), [AGENTS.md](AGENTS.md), [BUGBOT.md](BUGBOT.md))
 
 ### Code Quality

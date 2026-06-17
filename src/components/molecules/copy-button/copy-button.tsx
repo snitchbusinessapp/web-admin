@@ -1,8 +1,5 @@
+import { CheckCircleIcon, CopyIcon } from "@phosphor-icons/react";
 import { ComponentProps, forwardRef, useMemo, useState } from "react";
-import {
-  CheckCircleIcon,
-  DocumentDuplicateIcon,
-} from "@heroicons/react/24/outline";
 
 interface Props
   extends Omit<ComponentProps<"div">, "className" | "onClick" | "title"> {
@@ -16,10 +13,7 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
       navigator.clipboard?.writeText(text).then(() => setCopied(true));
     };
 
-    const Icon = useMemo(
-      () => (copied ? CheckCircleIcon : DocumentDuplicateIcon),
-      [copied]
-    );
+    const Icon = useMemo(() => (copied ? CheckCircleIcon : CopyIcon), [copied]);
     const title = copied ? "Copied" : "Click to copy to clipboard";
 
     return (
@@ -43,7 +37,7 @@ const CopyButton = forwardRef<HTMLDivElement, Props>(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default CopyButton;

@@ -1,15 +1,15 @@
 @import "tailwindcss";
+@import "../../shared/tailwind/variables.css";
+@import "../../shared/tailwind/utilities.css";
 @source ".";
 @config "../tailwind.config.cjs";
 @plugin "@tailwindcss/forms";
-
-@import "../../shared/tailwind/variables.css";
-@import "../../shared/tailwind/utilities.css";
 
 @layer base {
   html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    font-family: "Poppins", sans-serif;
   }
 
   @keyframes slide {
@@ -31,5 +31,121 @@
       25px 25px;
     -webkit-animation: slide 2s linear infinite;
     animation: slide 4s linear infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes drawer-down {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes drawer-left {
+    from {
+      opacity: 0;
+      transform: translateX(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes drawer-right {
+    from {
+      opacity: 0;
+      transform: translateX(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 200ms ease-out both;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 300ms ease-out both;
+  }
+
+  .animate-drawer-down {
+    animation: drawer-down 250ms ease-out both;
+  }
+
+  .animate-drawer-left {
+    animation: drawer-left 1000ms ease-out both;
+  }
+
+  .animate-drawer-right {
+    animation: drawer-right 1000ms ease-out both;
+  }
+
+  @keyframes login-card-exit {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+
+  @keyframes login-overlay-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes login-overlay-out {
+    from {
+      opacity: 0.9;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .animate-login-card-exit {
+    animation: login-card-exit 250ms ease-out both;
+  }
+
+  .animate-login-overlay-in {
+    animation: login-overlay-in 220ms ease-out both;
+  }
+
+  .animate-login-overlay-out {
+    animation: login-overlay-out 320ms ease-out both;
   }
 }
